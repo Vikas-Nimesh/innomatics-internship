@@ -1,5 +1,5 @@
 # importing library
-from flask import Flask
+from flask import Flask,render_template
 
 users = ['dhruv-dixit', 'azhaku', 'soham-jondhale', 'gaikwadpallavi']
 
@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def homepage():
-    return "This is home page"
+    return render_template('index.html')
 
 @app.route('/about')
 def about_us():
