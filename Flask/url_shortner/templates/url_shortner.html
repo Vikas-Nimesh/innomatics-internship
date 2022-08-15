@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/form.css') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/nav.css') }}">
+    <title>Url Shortner</title>
+</head>
+
+<body>
+
+    <nav class="links" style="--items: 10;">
+        <a href="{{url_for('homepage')}}">HOME</a>
+        <a href="{{url_for('url_shortner')}}">URL Shortner</a>
+        <a href="{{url_for('history')}}">History</a>
+
+    </nav>
+    
+
+    <div class="cover">
+        
+        <form  class="flex-form" method="post">
+          <label for="from">
+            <i class="ion-location"></i>
+          </label>
+          <input type="search" name="box_input" placeholder="Enter url you want to shorten">
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+    
+</body>
+</html>
